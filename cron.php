@@ -1,7 +1,7 @@
 <?php
-// SOAP_CLIENT_BASEDIR - folder that contains the PHP Toolkit and your WSDL
-// $USERNAME - variable that contains your Salesforce.com username (must be in the form of an email)
-// $PASSWORD - variable that contains your Salesforce.ocm password
+/*
+** This script will connect with the SalesForce account and the Trello account to synchronisation cards/cases and comments. 
+*/
 
 
 use Trello\Client;
@@ -11,12 +11,16 @@ set_time_limit(0);
 ini_set("memory_limit", "1024M");
 defined('APPLICATION_PATH') || define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/'));
 include APPLICATION_PATH . "/../vendor/autoload.php";
+
+/*SOAP client will be used to connect to the SalesForce account using the SF username and password obtained from SF settings*/
 define("SOAP_CLIENT_BASEDIR", APPLICATION_PATH . "/../soapclient");
-$USERNAME = 'sfforce@alquadri.co.uk';
-$PASSWORD = 'alquadri' . 'N9zQ3gkSHnOWIqJWRYoALycX';
+$USERNAME = 'sfforce@alquadri.co.uk';  //Dummy SF username. 
+$PASSWORD = 'alquadri' . 'N9zQ3gkSHnOWIqJWRYoALycX';  //Dummy password and passwordhash
 @$SOAP = 'partner.wsdl.xml';
-$Trello_key = 'd28ceb052acd6b40e3a6eb77fdf9bee3';
-$Trello_auth = '23b39119f523980bb02858b71bc463ef791b4f1c997eb7939bd657600e586b92';
+
+/* Trello uses the Symphony based library available at https://github.com/cdaguerre/php-trello-api */
+$Trello_key = 'trello_hash_key';  //Dummy Trello 
+$Trello_auth = 'Trello_Authentication_key';
 
 require_once(SOAP_CLIENT_BASEDIR . '/SforcePartnerClient.php');
 require_once(SOAP_CLIENT_BASEDIR . '/SforceHeaderOptions.php');
