@@ -1,5 +1,11 @@
 # salesforce-trello-synchronisation
-I've initiated and built a SalesForce (SF) and trello integration script that creates cards on trello whenever a new case comes through into SF and adds all the comments.  Plus allows pushing comments from the trello to SF
+
+<h4>Issue</h4>
+<p>At one of my clients SalesForce (SF) is used as the primary communication medium between the company and the external clients (brands and retailers).  Trello is used internally within the Tech/PM Team and shared by other departments.  Trello is used for more detailed discussions which are not essential to be communicated on the SalesForce cases.   
+There was one member dedicated for synchronization of the communication between the two tools.</p>
+
+<h4>Solution</h4>
+<p>To fill these gaps, I built a SalesForce (SF) and trello integration script that creates cards on trello whenever a new case comes through into SF and adds all the comments.  Plus allows pushing comments from the trello to SF</p>
 
 
 <h4>Actions performed by the Bot</h4> 
